@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title> Onglet site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="menu-btn" class="fas fa-bars"></button>
+    <div class="tabonglet">
+        <button class="tablinksonglet" onclick="openOnglet(event, 'Home')">Home</button>
+        <button class="tablinksonglet" onclick="openOnglet(event, 'Contact')">Contact</button>
+        <button class="tablinksonglet" onclick="openOnglet(event, 'Reservation')">Reservation</button>
+        <button class="tablinksonglet" onclick="openOnglet(event, 'Boutique')">Boutique</button>
+    </div>
+    <div id="p1">Créaction des Onglets</div>
+
+    <div class="tabcontent" id="Home">
+        <h3>Home</h3>
+        <p>Bienvenue sur la page Home</p>
+        <div class="picture">
+            <img src="images/img1.jpg">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Contact">
+        <h3>Contact</h3>
+        <p>Bienvenue sur la page Contact</p>
+        <div class="picture">
+            <img src="images/img2.jpg">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Reservation">
+        <h3>Reservation</h3>
+        <p>Bienvenue sur la page Reservation</p>
+        <div class="picture">
+            <img src="images/img3.jpg">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Boutique">
+        <h3>Boutique</h3>
+        <p>Bienvenue sur la page Boutique</p>
+        <div class="picture">
+            <img src="images/img4.jpg">
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
