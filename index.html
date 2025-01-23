@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+     <!-- code bar link library -->
+     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    
+     <!--pdf link library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+  
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- header section starts -->
+    <header class="header">
+        <button id="menu-btn" class="fas fa-bars"></button>
+        <section class="flex">
+            <button class="tablinks" onclick="openOnglet1(event, 'accueil' )"><div class="projet"><span>Projet final</span> | DOCK</div></button>
+            
+            <div class="icons">
+                <div class="nom">NOUMBISSIE </div>
+                <div id="user-btn" ><img src="images/photo2.jpg" alt=""></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- page container starts -->
+
+    <div class="container">
+        <!--side bar section starts -->
+           <div class="side-bar">
+               <div class="close-side-bar">
+                   <i class="fas fa-times"></i>
+                </div>
+   
+               <div class="profile">
+                <button class="tablinks" onclick="openOnglet1(event, 'accueil' )"><img src="images/logo_kfokam48.png" alt=""></button>
+               </div>
+               <nav class="navbar">
+                   <button class="tablinks" onclick="openOngletop()">Accueil</button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/chronomètre/projet1.html')"><i class="fas fa-chalkboard-user"></i><span>Chronomètre</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/Todolist/projet2.html')"><i class="fas fa-chalkboard-user"></i><span>To Do List</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/jeudesaut/projet3.html')"><i class="fas fa-chalkboard-user"></i><span>Jeux de saut</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/jeupierrepapierciseaux/projet4.html')"><i class="fas fa-chalkboard-user"></i><span>Jeu Pierre-Papier-Ciseaux</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/verificationmotdepasse/projet5.html')"><i class="fas fa-chalkboard-user"></i><span>Vérification de Mot de Passe</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/jeudecalcul/projet6.html')"><i class="fas fa-chalkboard-user"></i><span>Jeu de Calcul</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/generateurdecodebarre/projet7.html')"><i class="fas fa-chalkboard-user"></i><span>Générateur de Code-barres</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/generateurdemotdepasse/projet8.html')"><i class="fas fa-chalkboard-user"></i><span>Générateur de Mot de Passe</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/raccourcisseurdelien/projet9.html')"><i class="fas fa-chalkboard-user"></i><span>Raccourcisseur de lien</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/creerdesonglets/projet10.html')"><i class="fas fa-chalkboard-user"></i><span>Créer des Onglets</span></button>
+                   <button class="tablinks" onclick="chargerFichierHTML('projets/calculatrice/projet11.html')"><i class="fas fa-chalkboard-user"></i><span>Calculatrice</span></button>
+
+                   
+               </nav>
+           </div>
+       
+        <!-- side bar section ends -->
+   
+        <!-- page contenu starts -->
+           <div class="contenu " id="accueil">
+            <div class="accueil">
+               <div class="photo"><img src="images/photo1.jpeg" alt=""><span>NOUMBISSIE Joseph</span></div>
+               <div class="attributs">
+                     <div class="element"><span>Nom Complet:</span>NOUMBISSIE NGAMINI Joseph </div>
+                     <div class="element"><span>E-mail:</span>noumbissiej@gmail.com</div>
+                     <div class="element"><span>Téléphone:</span>+237 677 27 74 51</div>
+                     <div class="element"><span>Adresse:</span>Douala - Carrefour IPA</div>
+               </div>
+            </div>
+         </div>
+
+          <div class="contenu" id="contenu" style="display: none;">
+            
+            <h2></h2>
+            <p></p>
+        </div>
+        
+        <div class="contenu" id="chronometre" style="display: none;">
+            <!-- Contenu de l'onglet Chronomètre -->
+        </div>
+
+        <div class="contenu" id="list" style="display: none;">
+            <!-- Contenu de l'onglet list -->
+        </div>
+
+        <div class="contenu" id="jeu-saut" style="display: none;">
+            <!-- Contenu de l'onglet jeu-saut -->
+        </div>
+
+        <div class="contenu" id="jeu-ppc" style="display: none;">
+            <!-- Contenu de l'onglet jeu-ppc -->
+        </div>
+
+        <div class="contenu" id="verifier-MP" style="display: none;">
+            <!-- Contenu de l'onglet verifier-MP -->
+        </div>
+
+        <div class="contenu" id="jeu-calcul" style="display: none;">
+            <!-- Contenu de l'onglet jeu-calcul -->
+        </div>
+
+        <div class="contenu" id="generateur-CB" style="display: none;">
+            <!-- Contenu de l'onglet generateur-CB -->
+        </div>
+
+        <div class="contenu" id="generateur-MP" style="display: none;">
+            <!-- Contenu de l'onglet generateur-MP -->
+        </div>
+
+        <div class="contenu" id="raccourcisseur-lien" style="display: none;">
+            <!-- Contenu de l'onglet raccourcisseur-lien -->
+        </div>
+
+        <div class="contenu" id="creer-onglet" style="display: none;">
+            <!-- Contenu de l'onglet creer-onglet -->
+        </div>
+
+        <div class="contenu" id="calculatrice" style="display: none;">
+            <!-- Contenu de l'onglet calculatrice -->
+        </div>
+   
+        <!-- page contenu ends -->
+    </div>
+     <!-- page container ends -->
+
+    
+     
+    <!-- footer section starts -->
+
+
+    <footer class="footer">
+        
+       &copy; Copyright @ 2023 by <span>KFOKAM48 - NOUMBISSIE Joseph</span> | All rights reserved!
+
+    </footer>
+
+    <!-- footer section ends -->
+    <!-- custom js file link -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
