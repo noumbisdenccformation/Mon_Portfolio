@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200&family=Roboto:wght@100;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    flex-direction: column;
+    background-color: #539cf0;
+  }
+
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 400px;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+  }
+
+  .choix{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+  }
+
+  .choix h4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    color: #999;
+  }
+
+  img{
+    width:60px;
+    height: 60px;
+    margin:20px 0;
+  }
+
+  button{
+    padding: 5px 30px;
+    margin-top: 20px;
+    border: 2px solid #5372f0;
+    background-color: #62a2f7;
+    color: #fff;
+    cursor:pointer;
+    border-radius: 6px;
+    transition: 0.5s;
+    text-transform:capitalize;
+  }
+
+  button:focus{
+    background:#fff;
+    color:#5372f0;
+  }
+
+  /* animation du titre du jeu*/
+  .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+ /* Gestion de la taille des écrans */
+
+
+ @media (max-width:390px){
+    
+  section{
+    
+    width: 350px;
+    padding: 15px;
+    margin:10px;
+    border-radius: 3px;
+  }
+
+  button{
+    padding: 3px 20px;
+    border-radius: 4px;
+  }
+
+}
+
+@media (max-width:320px){
+
+  section{
+    width: 310px;
+    padding: 10px;
+    margin:5px;
+    border-radius: 3px;
+  }
+
+  button{
+    padding: 3px 15px;
+    border-radius: 4px;
+  }
+
+
+}
+
+
+@media (max-width:162px){
+
+  section{
+    width: 90%;
+    padding: 0;
+    margin:2px;
+    border-radius: 3px;
+  }
+
+  h1{
+    font-size: 10px;
+  }
+
+  button{
+    padding: 1px 1px;
+    border-radius: 4px;
+    font-size: 10px;
+  }
+
+  .choix h4{
+    font-size: 10px;
+    
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+}
+
+
+}
