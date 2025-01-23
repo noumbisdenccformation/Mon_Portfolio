@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Nunito:wght@200;300;400;500;600&family=Roboto+Mono:wght@300;400&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background-color: #21B66F;
+}
+
+.chronometre{
+    background-color: #fff;
+    padding:10px;
+    border-radius:6px;
+    width:400px;
+    text-align:center;
+}
+
+.tim{
+    margin:auto;
+    width:100%;
+    border:1px solid #999;
+    border-radius:6px;
+    padding:5px 0;
+    text-align:center;
+    font-size:35px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+.tim span{
+    font-family:'Dancing Script', cursive;
+    padding:5px;
+}
+
+.controls{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+button{
+    background-color:#1d9c5e;
+    color:#fff;
+    font-size:15px;
+    padding:10px 20px;
+    border-radius:5px;
+    width:31%;
+    border:0;
+    letter-spacing:1px;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+button:hover{
+    transform: scale(0.9);
+}
+
+
+/* animation du titre */
+
+  @keyframes write {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  #p1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid rgba(224, 223, 220, 0.507);
+    animation: write 10s steps(70, end) backwards; /* Ajout de 'forwards' pour maintenir la dernière valeur de l'animation */
+    position: relative; /* Ajout pour positionner correctement le curseur */
+  }
+  
+  /* Nouvelle règle pour masquer le curseur */
+  #p1::after {
+    content: ''; /* Pour assurer la présence de contenu */
+    position: absolute; /* Position absolue par rapport à #p1 */
+    top: 0; /* Position au-dessus du texte */
+    right: 0; /* Position à l'extrême droite */
+    width: 0; /* Largeur nulle pour masquer le curseur */
+    height: 100%; /* Hauteur du texte */
+    border-right: 0.15em solid transparent; /* Masque complètement le curseur */
+  }
+
+
+
+
+
+
+
+
+
+/*gestion de la taille des écrans*/
+
+@media (max-width:375px){
+    
+    .tim{
+        font-size:25px;
+        }
+ }
+
+
+
+@media (max-width:320px){
+    
+   .tim{
+         border-radius:3px;
+         padding:3px 1px;
+         font-size:18px;
+         
+       }
+    
+   .tim span{
+             padding:3px;
+            }
+
+    button{
+           font-size:12px;
+           padding:8px 15px;
+           border-radius:4px;
+          }
+
+      
+}
+
+@media (max-width:162px){
+    body{
+        min-height: 50vh;
+       }
+
+    #p1{
+        font-size: 12px;
+    }
+
+   .chronometre{
+                 padding:5px;
+                 border-radius:3px;
+                 width:150px;
+              }
+
+   .tim{
+         border-radius:2px;
+         padding:2px 1px;
+         font-size:10.5px;
+         font-weight:bold;
+         margin-top: 5px;
+         margin-bottom:5px;
+       }
+    
+   .tim span{
+             padding:3px;
+            }
+
+    button{
+           font-size:10px;
+           padding:5px 10px;
+           border-radius:3px;
+          }
+
+
+}
