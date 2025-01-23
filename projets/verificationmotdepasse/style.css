@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200&family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #675afe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Stylisé le conteneur pour les entrées */
+.container{
+    background-color: #fff;
+    width:400px;
+    padding:20px;
+    border-radius: 6px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+h1#p1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid rgba(224, 223, 220, 0.507);
+    animation: write 10s steps(70, end) backwards; /* Animation du titre */
+    position: relative;
+    text-align: center; /* Centrage du titre */
+    margin-bottom: 20px; /* Ajout de marge en bas */
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    outline:0;
+}
+.contenu{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    align-content: center;
+}
+
+/* gérer la visibilité du mot de passe */
+
+.contenu img{
+    width: 15%;
+    height: 95%;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #ccc;
+}
+
+
+
+#psw{
+    width: 85%;
+    height: 95%;
+    display: inline-block;
+    border: none;
+}
+
+
+/*Personnaliser le boutton d'envoi*/
+
+input[type="submit"]{
+    background-color: #675afe;
+    color:#fff;
+    border: 1px solid #675afe;
+    margin: 10px;
+    align-content: center;
+}
+
+/* Personnaliser la boite message */
+
+#message{
+    display: none;
+    flex-direction:column;
+    background-color: #fff;
+    border-radius: 6px;
+    width:350px;
+    color:#000;
+    position:relative;
+    padding: 20px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    animation: anime 0.5s ease-out;
+}
+
+/*Animation message */
+
+@keyframes anime{
+    from{
+        transform: translateY(100px);
+    }
+}
+
+h3{
+    font-size:16px;
+    font-weight:400px;
+}
+
+#message p {
+        margin-left: 7px;
+        padding: 7px 0;
+        font-size: 15px;
+}
+
+/* Lorsque les exigences sont erronées*/
+
+.invalid{
+    color:red;
+}
+
+.invalid:before{
+    position: relative;
+    left: -7px;
+    content:"✕";
+}
+
+/*Lorsque les exigences sont respectées*/
+
+.valid{
+    color: green;
+}
+
+.valid:before{
+    position: relative;
+    left: -7px;
+    content:"✓";
+}
+
+/* animation du titre */
+
+@keyframes write {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  #p1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid rgba(224, 223, 220, 0.507);
+    animation: write 10s steps(70, end) backwards; /* Ajout de 'forwards' pour maintenir la dernière valeur de l'animation */
+    position: relative; /* Ajout pour positionner correctement le curseur */
+  }
+  
+  /* Nouvelle règle pour masquer le curseur */
+  #p1::after {
+    content: ''; /* Pour assurer la présence de contenu */
+    position: absolute; /* Position absolue par rapport à #p1 */
+    top: 0; /* Position au-dessus du texte */
+    right: 0; /* Position à l'extrême droite */
+    width: 0; /* Largeur nulle pour masquer le curseur */
+    height: 100%; /* Hauteur du texte */
+    border-right: 0.15em solid transparent; /* Masque complètement le curseur */
+  }
+
+
+
+
+
+
+ /* Gestion de la taille des écrans */
+
+
+ @media (max-width:390px){
+    
+    .container{
+        
+        width:350px;
+        padding:18px;
+        margin: 18px;
+    }
+  }
+  
+  @media (max-width:320px){
+    
+    .container{
+        
+        width:300px;
+        padding:15px;
+        margin: 15px;
+    }
+  }
+  
+  @media (max-width:162px){
+    
+    .container{
+        width:150px;
+        padding:5px;
+        margin: 5px;
+    }
+
+    h1#p1 {
+        font-size: 11.25px;
+    }
+    
+    label{
+        font-size: 10px;
+    }
+
+    input[type="text"], #psw {
+        width: 80%;
+        height: 4px;
+    }
+
+    .contenu img{
+        width: 10%;
+        height: 80%;
+     }
+    
+
+    input[type="submit"]{
+        margin: 4px;
+        width: 90%;
+        height: 3.5px;
+        padding: auto;
+        
+    }
+  }
+  
