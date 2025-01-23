@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Roboto+Mono:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #7f99df;
+    color:#fff;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+section{
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    text-align: center;
+}
+
+.error_message{
+    color: rgb(226,30,30);
+    padding: 15px;
+}
+
+input, button{
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    border:0;
+    outline:0;
+    width:100%;
+}
+
+input{
+    background-color: #dfdef4;
+}
+
+button{
+    background-color: #255fe5;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.result{
+    margin-top: 10px;
+    color: #255fe5;
+    padding: 15px;
+    border: 1px solid #255fe5;
+    display: none;
+}
+
+/*Pour l'animation du titre */
+
+.char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+ /* Gestion de la taille des écrans */
+ @media (max-width:428px){
+    h1{
+       font-size: 22px;
+    }
+    
+ }
+ 
+ @media (max-width:375px){
+    h1{
+       font-size: 20px;
+    }
+ }
+
+ @media (max-width:162px){
+    h1{
+        font-size: 10px;
+     }
+
+     #note{
+        display: none;
+     }
+
+     header{
+        margin: 0;
+        height: 15px;
+     }
+
+     section{
+        height: calc(30vh - 50px);
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    input{
+        margin-top: 25px;
+        height: 25px;
+        width: 100%;
+    }
+
+    button{
+        margin-top: 5px;
+        height: 35px;
+        width: 100%;
+    }
+
+ }
