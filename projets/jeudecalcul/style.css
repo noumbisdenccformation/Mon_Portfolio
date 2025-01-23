@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #18f;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Message{
+    color: #fff;
+    padding: 5px 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+
+}
+
+section {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section .calcul{
+    display: flex;
+}
+
+section .calcul h1{
+    color: #fff;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+section h2{
+    color: #fff;
+    margin: 10px 0;
+}
+
+section input{
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    margin-bottom: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+section input[type="submit"]{
+    padding: 10px 65px;
+    border: 0;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+section input[type="submit"]:hover{
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.score {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+a{
+    color:#fff;
+    text-decoration: 0;
+    border:1px solid #fff;
+    padding:10px 25px;
+    border-radius: 5px;
+    margin: 25px 0;
+    display: none;
+}
+
+span {
+    font-size: 100px;
+}
+
+.animated-title {
+    font-size: 12px;
+}
+
+
+/*Pour l'animation du titre */
+
+.char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+ /* Gestion de la taille des écrans */
+
+ @media (max-width:768px){
+
+
+    .animated-title {
+        font-size: 12px;
+    }
+    
+
+
+
+.Message{
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+section {
+    width: 200px;
+   
+}
+
+
+section .calcul h1{
+    font-size: 25px;
+    margin: 0 5px;
+}
+
+section h2{
+    margin: 5px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+section input{
+    padding: 10px 0;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+section input[type="submit"]{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+section input[type="submit"]:hover{
+    letter-spacing: 3px;
+}
+
+.score {
+    font-size: 25px;
+}
+
+a{
+    border:1px solid #fff;
+    padding:3px 5px;
+    border-radius: 3px;
+    margin: 5px 0;
+    
+}
+
+span {
+    font-size: 25px;
+}
+
+ }
+
+
+
+@media (max-width:162px){
+
+
+    
+    .animated-title {
+        font-size: 12px;
+    }
+
+
+.Message{
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+section {
+    width: 200px;
+   
+}
+
+
+section .calcul h1{
+    font-size: 15px;
+    margin: 0 5px;
+}
+
+section h2{
+    margin: 3px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+section input{
+    padding: 3px 0;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+section input[type="submit"]{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+section input[type="submit"]:hover{
+    letter-spacing: .5px;
+}
+
+.score {
+    font-size: 10px;
+}
+
+a{
+    border:1px solid #fff;
+    padding:3px 5px;
+    border-radius: 3px;
+    margin: 5px 0;
+    
+}
+
+span {
+    font-size: 20px;
+}
+
+ }
+    
